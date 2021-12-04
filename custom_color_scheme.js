@@ -459,6 +459,16 @@
               noel03.width = noel03.height = 47;
               noel03.className = 'DqMRee SsAred';
 
+              let noel04 = new Image();
+              noel04.src = 'https://i.postimg.cc/PJbJrM2q/Cap.png';
+              noel04.width = noel04.height = 47;
+              noel04.className = 'DqMRee SsAred';
+
+              let noel05 = new Image();
+              noel05.src = 'https://i.postimg.cc/PrhNVB5v/Fir-tree.png';
+              noel05.width = noel05.height = 47;
+              noel05.className = 'DqMRee SsAred';
+
 
               if(document.querySelector('#apple').childElementCount > 21)
                 for(let i = document.querySelector('#apple').childElementCount - 1; i >= 22; i--)
@@ -473,6 +483,8 @@
               settings.noel       && document.querySelector('#apple').appendChild(noel01);
               settings.noel       && document.querySelector('#apple').appendChild(noel02);
               settings.noel       && document.querySelector('#apple').appendChild(noel03);
+              settings.noel       && document.querySelector('#apple').appendChild(noel04);
+              settings.noel       && document.querySelector('#apple').appendChild(noel05);
 
               const HZ = code.match(
                 /g\.type<this\.[a-zA-Z0-9_$]{1,8}\.length\?g\.type:0/
@@ -706,8 +718,8 @@
       walls:         '#101010',
       borders:       '#90EE90',
       shadows:       '#302C35',
-      light_squares: '#FFFFFF',
-      dark_squares:  '#FF7F7F',
+      light_squares: '#1E792C',
+      dark_squares:  '#1E792C',
       buttons:       '#1E792C',
       sky:           '#ADD8E6',
       separators:    '#201559',
