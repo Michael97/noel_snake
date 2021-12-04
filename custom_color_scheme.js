@@ -714,12 +714,12 @@
 
   window.snake.noel = function() {
     return window.snake.scheme({
-      score_bar:     '#262428',
+      score_bar:     '#ff1919',
       walls:         '#101010',
       borders:       '#90EE90',
       shadows:       '#302C35',
-      light_squares: '#910a0a',
-      dark_squares:  '#1E792C',
+      light_squares: '#2ac943',
+      dark_squares:  '#e01d1d',
       buttons:       '#1E792C',
       sky:           '#ADD8E6',
       separators:    '#201559',
