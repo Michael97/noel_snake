@@ -718,7 +718,7 @@
       walls:         '#101010',
       borders:       '#90EE90',
       shadows:       '#302C35',
-      light_squares: '#1E792C',
+      light_squares: '#FF7F7F',
       dark_squares:  '#1E792C',
       buttons:       '#1E792C',
       sky:           '#ADD8E6',
