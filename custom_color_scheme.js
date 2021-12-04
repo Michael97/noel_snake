@@ -414,6 +414,25 @@
             );
             
             if(settings.burger || settings.cactus || settings.hotdog || settings.egg || settings.lime || settings.red_pepper || settings.noel) {
+              const noel_sources = ["https://i.postimg.cc/cH5WHhHM/Candy.png",
+                                    "https://i.postimg.cc/D09KQz1S/Candy-2.png",
+                                    "https://i.postimg.cc/zG1rVVJM/Cookies.png",
+                                    "https://i.postimg.cc/ry0s4RkF/Santa.png",
+                                    "https://i.postimg.cc/QNf29yyZ/Bag.png",
+                                    "https://i.postimg.cc/5NjZwShY/Bells.png",
+                                    "https://i.postimg.cc/T3DFsYYT/Bullfinch.png",
+                                    "https://i.postimg.cc/pdM4Mbpz/Candles.png",
+                                    "https://i.postimg.cc/GhN6zsRM/Christmas-toy.png",
+                                    "https://i.postimg.cc/d1qfD2R0/Deer.png",
+                                    "https://i.postimg.cc/ydvbRDny/Gift.png",
+                                    "https://i.postimg.cc/vTTStGNF/Glass-Ball.png",
+                                    "https://i.postimg.cc/Bv5yqYKy/Mistletoe.png",
+                                    "https://i.postimg.cc/Fz6CPwMf/Mittens.png",
+                                    "https://i.postimg.cc/RV3D3Vtw/Snowflake.png",
+                                    "https://i.postimg.cc/HsfPbD0R/Snowman.png",
+                                    "https://i.postimg.cc/XYd18HQJ/Sock.png",
+                                    "https://i.postimg.cc/W4VWfGH7/Wreath.png"]
+
               let burg = new Image();
               burg.src = 'https://i.postimg.cc/B6ycxmBb/porga.png';
               burg.width = burg.height = 47;
@@ -443,31 +462,18 @@
               pepper.src = 'https://i.postimg.cc/BQqHMbDc/redpepper.png';
               pepper.width = pepper.height = 47;
               pepper.className = 'DqMRee SsAred';
+              
+              const noel_images = [];
 
-              let noel01 = new Image();
-              noel01.src = 'https://i.postimg.cc/cH5WHhHM/Candy.png';
-              noel01.width = noel01.height = 47;
-              noel01.className = 'DqMRee SsAred';
-
-              let noel02 = new Image();
-              noel02.src = 'https://i.postimg.cc/D09KQz1S/Candy-2.png';
-              noel02.width = noel02.height = 47;
-              noel02.className = 'DqMRee SsAred';
-
-              let noel03 = new Image();
-              noel03.src = 'https://i.postimg.cc/zG1rVVJM/Cookies.png';
-              noel03.width = noel03.height = 47;
-              noel03.className = 'DqMRee SsAred';
-
-              let noel04 = new Image();
-              noel04.src = 'https://i.postimg.cc/PJbJrM2q/Cap.png';
-              noel04.width = noel04.height = 47;
-              noel04.className = 'DqMRee SsAred';
-
-              let noel05 = new Image();
-              noel05.src = 'https://i.postimg.cc/PrhNVB5v/Fir-tree.png';
-              noel05.width = noel05.height = 47;
-              noel05.className = 'DqMRee SsAred';
+              for (let src in noel_sources)
+              {
+                let noel_image = new Image();
+                noel_image.src = noel_sources[src]; 
+                console.log(src);
+                noel_image.width = noel_image.height = 47;
+                noel_image.className = 'DqMRee SsAred';
+                noel_images.push(noel_image);
+              }
 
 
               if(document.querySelector('#apple').childElementCount > 21)
@@ -480,11 +486,13 @@
               settings.egg        && document.querySelector('#apple').appendChild(egg);
               settings.lime       && document.querySelector('#apple').appendChild(lime);
               settings.red_pepper && document.querySelector('#apple').appendChild(pepper);
-              settings.noel       && document.querySelector('#apple').appendChild(noel01);
-              settings.noel       && document.querySelector('#apple').appendChild(noel02);
-              settings.noel       && document.querySelector('#apple').appendChild(noel03);
-              settings.noel       && document.querySelector('#apple').appendChild(noel04);
-              settings.noel       && document.querySelector('#apple').appendChild(noel05);
+              if (settings.noel)
+              {
+                for (let noel_img in noel_images)
+                {
+                  document.querySelector('#apple').appendChild(noel_images[noel_img]);
+                }
+              }
 
               const HZ = code.match(
                 /g\.type<this\.[a-zA-Z0-9_$]{1,8}\.length\?g\.type:0/
