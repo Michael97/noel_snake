@@ -416,6 +416,7 @@
             if(settings.burger || settings.cactus || settings.hotdog || settings.egg || settings.lime || settings.red_pepper || settings.noel) {
               const noel_sources = ["https://i.postimg.cc/cH5WHhHM/Candy.png",
                                     "https://i.postimg.cc/D09KQz1S/Candy-2.png",
+                                    "https://i.postimg.cc/PJbJrM2q/Cap.png",
                                     "https://i.postimg.cc/zG1rVVJM/Cookies.png",
                                     "https://i.postimg.cc/ry0s4RkF/Santa.png",
                                     "https://i.postimg.cc/QNf29yyZ/Bag.png",
